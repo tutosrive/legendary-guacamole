@@ -1,3 +1,3 @@
 # legendary-guacamole
 
-Código para "reciclar" después... (Any language)
+Estaré compartiendo "todo tipo" de código, en todos los lenguajes posibles, en la medida de lo posible, cada archivo tendrá su **cdn**.
