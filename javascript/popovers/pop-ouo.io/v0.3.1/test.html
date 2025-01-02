@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop ouo.io</title>
+    <script defer type="module" src="./pop.mjs"></script>
+    <style>
+        :root {
+            --bg-color: rgb(8, 0, 12);
+            --fg-color: rgb(255, 255, 255);
+            --fg-a: rgb(252, 0, 0);
+        }
+
+        [data-theme=dark] {
+            --bg-color: rgb(8, 0, 12);
+            --fg-color: rgb(255, 255, 255);
+            --fg-a: rgb(252, 0, 0);
+        }
+
+        [data-theme=light] {
+            --bg-color: rgb(55, 0, 128);
+            --fg-color: rgb(255, 255, 255);
+            --fg-a: rgb(0, 153, 255);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--fg-color);
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 10px;
+            width: 70vw;
+            height: 50vh;
+            margin: 20px auto;
+            box-shadow: 0 0 12px red;
+            border-radius: 12px;
+            padding: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--fg-a);
+        }
+
+        .blur-card {
+            backdrop-filter: blur(10px);
+        }
+
+        .img-banner-w {
+            max-width: 32vw;
+        }
+
+        .ctn-banner-img-w {
+            bottom: 1vh;
+            position: absolute;
+        }
+
+        .img-banner-h {
+            max-height: 50vh;
+        }
+
+        .ctn-main {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        button {
+            background-color: rgb(25, 0, 48);
+            color: var(--fg-color);
+            border-radius: 5px;
+            border: 1px rgb(17, 0, 255) solid;
+            outline: none;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body data-theme="dark" class="blur-card">
+    <div>
+        <!-- Start of ouo.io banner code -->
+        <a href="http://ouo.io/ref/hoidZ1Y5"><img class="img-banner-h" src="http://ouo.io/images/banners/r6.jpg"
+                title="ouo.io - Make short links and earn the biggest money" /></a>
+        <!-- End of ouo.io banner code -->
+    </div>
+    <div class="ctn-main">
+        <div class="theme">
+            <button class="change-theme" id="btn-theme">Dark</button>
+        </div>
+        <header>
+            <h1>Gana dinero acortando url's con <a href="http://ouo.io/ref/hoidZ1Y5">ouo.io</a></h1>
+        </header>
+
+        <main>
+            <section>
+                <button id="btn-tog" popovertarget="banner-ouo" popovertargetaction="toggle">Toggle</button>
+            </section>
+        </main>
+        <div class="ctn-banner-img-w">
+            <!-- Start of ouo.io banner code -->
+            <a href="http://ouo.io/ref/hoidZ1Y5">
+                <img class="img-banner-w" src="http://ouo.io/images/banners/r1.jpg"
+                    title="ouo.io - Make short links and earn the biggest money" />
+            </a>
+            <!-- End of ouo.io banner code -->
+        </div>
+    </div>
+
+    <script type="module">
+        const a = document.querySelector('#btn-theme');
+        a.addEventListener('click', (f) => {
+            f.preventDefault();
+            let b = document.body.dataset.theme;
+            let c = '';
+            for (let i = 0; i < b.length; i++) {
+                let d = b[i]; c += i === 0 ? d.toUpperCase() : d;
+            } a.textContent = c; e(b);
+        });
+        function e(b) {
+            b === 'dark' ? (document.body.dataset.theme = 'light') : (document.body.dataset.theme = 'dark');
+        }
+
+        document.querySelector("#btn-tog").click()
+    </script>
+</body>
+
+</html>

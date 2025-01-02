@@ -1,0 +1,14 @@
+/* Contenedor */
+[popover] {box-sizing: border-box;background-color: #0c157999;padding: 1vh 2vw;border-radius: 10px;overflow: hidden;}
+/* "Detrás" del contenedor */
+[popover]::backdrop {backdrop-filter: blur(5px);}
+/* Cabecera popover */
+[popover] .header-banner {display: flex;align-items: center;justify-content: center;width: 100%;margin: 0;}
+/* contenedor botón "_close" */
+[popover] .btn-container {display: flex;width: 170%;justify-content: flex-end;}
+/* botón "_close" */
+[popover] .btn-toggle {transform: translate(2.2vw, -0.9vw);border-radius: 5pc;border: none;padding: 13px;color: #ffffff;max-height: 20px;background-color: #00053c;cursor: pointer;}
+/* Cuerpo popover */
+[popover] .body-banner {display: flex;justify-content: center;}
+/* Imagen popover */
+[popover] .img-banner {width: 50vh;border-radius: 20px;}
