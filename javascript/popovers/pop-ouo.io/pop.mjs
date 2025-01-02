@@ -6,7 +6,7 @@ const html = `
       <div class="banner" id="banner-ouo" popover="manual" data-popover="ouo-refer">
           <header class="header-banner">
             <div class="btn-container">
-              <button title="Close" class="btn-toggle" id="__close"><span class="spn-pop-ouo"></span></button>
+              <button title="Close" class="btn-toggle" id="__close"></button>
             </div>
           </header>
           <section class="body-banner">
@@ -25,6 +25,7 @@ export default class PopOuo {
    * @type {HTMLElement}
    */
   pop;
+  count_close;
   constructor() {
     // Cargar contenido (popover)
     this.load();
@@ -49,12 +50,24 @@ export default class PopOuo {
     document.head.insertAdjacentHTML("beforeend", tag_style);
   }
 
+  /**
+   * Añadir "escuchador" de clicks (para cerrar)
+   */
   listenClose() {
     const btn_close = document.querySelector("#__close");
+    this.count_close = 0;
     btn_close.addEventListener("click", (e) => {
       e.preventDefault();
-      this.pop.hidePopover();
+      this.count_close == 2 ? this.pop.hidePopover() : this.redirect();
     });
+  }
+
+  /**
+   * Redireccionar
+   */
+  redirect() {
+    open("http://ouo.io/ref/hoidZ1Y5");
+    this.count_close++;
   }
 }
 

@@ -1,53 +1,14 @@
-[popover] {
-  box-sizing: border-box;
-  background-color: #0c157999;
-  padding: 1vh 2vw;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-[popover]::backdrop {
-  backdrop-filter: blur(5px);
-}
-
-[popover] .header-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0;
-}
-
-[popover] .btn-container {
-  display: flex;
-  width: 170%;
-  justify-content: flex-end;
-}
-
-[popover] .btn-toggle {
-  transform: translate(2.2vw, -0.9vw);
-  border-radius: 5pc;
-  border: none;
-  padding: 13px;
-  color: #ffffff;
-  max-height: 20px;
-  /* background-color: #00053c; */
-  background-color: #ff0000;
-  cursor: pointer;
-}
-
-[popover] .spn-pop-ouo {
-  display: block;
-  transform: translate(1vw, -1vh);
-  font-size: 3vh;
-}
-
-[popover] .body-banner {
-  display: flex;
-  justify-content: center;
-}
-
-[popover] .img-banner {
-  width: 50vh;
-  border-radius: 20px;
-}
+/* Contenedor */
+[popover] {box-sizing: border-box;background-color: #0c157999;padding: 1vh 2vw;border-radius: 10px;overflow: hidden;}
+/* "Detrás" del contenedor */
+[popover]::backdrop {backdrop-filter: blur(5px);}
+/* Cabecera popover */
+[popover] .header-banner {display: flex;align-items: center;justify-content: center;width: 100%;margin: 0;}
+/* contenedor botón "_close" */
+[popover] .btn-container {display: flex;width: 170%;justify-content: flex-end;}
+/* botón "_close" */
+[popover] .btn-toggle {transform: translate(2.2vw, -0.9vw);border-radius: 5pc;border: none;padding: 13px;color: #ffffff;max-height: 20px;background-color: #00053c;cursor: pointer;}
+/* Cuerpo popover */
+[popover] .body-banner {display: flex;justify-content: center;}
+/* Imagen popover */
+[popover] .img-banner {width: 50vh;border-radius: 20px;}
