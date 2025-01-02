@@ -1,18 +1,4 @@
 /**
- * Estilos de el popover
- * @type {Object}
- */
-const styles = {
-  "[popover]": `box-sizing: border-box;background-color: #0C157999;padding: 1vh 2vw;border-radius: 10px`,
-  "[popover] .header-banner": `display: flex;align-items: center;justify-content: center;width: 100%;margin: 0;`,
-  "[popover] .btn-container": `display: flex;width: 170%;justify-content: flex-end;`,
-  "[popover] .btn-toggle": `transform: translate(1vh, -2vh);border-radius: 5px 0 0 5pc;border: none;padding: 3vw;color: #FFFFFF;max-height: 6vh;background-color: #00053C;`,
-  "[popover] .spn-pop-ouo": `display: block;transform: translate(1vw, .5vh);font-size: 3vh;`,
-  "[popover] .body-banner": `display: flex;justify-content: center;`,
-  "[popover] .img-banner": `width: 70vw;border-radius: 20px`,
-};
-
-/**
  * Popover, contenedor
  * @type {HTMLElement}
  */
@@ -44,26 +30,23 @@ export default class PopOuo {
     this.load();
     // Contenedor popover
     this.pop = document.querySelector('[data-popover="ouo-refer"]');
-    document.querySelector("#btn-tog").click();
   }
 
+  /**
+   * Cargar configuraciones
+   */
   load() {
     document.body.insertAdjacentHTML("beforeend", html);
-    // this.stylesLoad();
+    this.stylesLoad();
     this.listenClose();
   }
 
+  /**
+   * Cargar estilos al HTML
+   */
   stylesLoad() {
-    /**
-     * @type {HTMLStyleElement}
-     */
-    // const tag_style = document.createElement("style");
-    // for (let style in styles) {
-    //   tag_style.innerHTML += `${style}{${styles[style]}}\n`;
-    // }
-    const tag_style = "";
-
-    document.head.insertAdjacentElement("beforeend", tag_style);
+    const tag_style = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tutosrivegamerLQ/legendary-guacamole@main/javascript/popovers/pop-ouo.io/pop.css">`;
+    document.head.insertAdjacentHTML("beforeend", tag_style);
   }
 
   listenClose() {
@@ -74,99 +57,5 @@ export default class PopOuo {
     });
   }
 }
-
-/*
-      
-      [popover] {
-      
-            box-sizing: border-box;
-      
-            background-color: #0C157999;
-      
-            padding: 1vh 2vw;
-      
-            border-radius: 10px
-      
-          }
-      
-          [popover]:popover-open {
-      
-            display: block
-      
-          }
-      
-          [popover] .header-banner {
-      
-            display: flex;
-      
-            align-items: center;
-      
-            justify-content: center;
-      
-            width: 100%;
-      
-            margin: 0;
-      
-          }
-      
-          [popover] .btn-container {
-      
-            display: flex;
-      
-            width: 170%;
-      
-            justify-content: flex-end;
-      
-          }
-      
-          
-      
-          [popover] .btn-toggle{
-      
-            transform: translate(1vh, -2vh);
-      
-            border-radius: 5px 0 0 5pc;
-      
-            border: none;
-      
-            padding: 3vw;
-      
-            color: #FFFFFF;
-      
-            max-height: 6vh;
-      
-            background-color: #00053C;
-      
-          }
-      
-          
-      
-          [popover] .spn-pop-ouo{
-      
-            display: block;
-      
-            transform: translate(1vw, .5vh);
-      
-            font-size: 3vh
-      
-          }
-      
-          [popover] .body-banner {
-      
-            display: flex;
-      
-            justify-content: center;
-      
-          }
-      
-          [popover] .img-banner {
-      
-            width: 70vw;
-      
-            border-radius: 20px
-      
-          }
-      
-      */
 
 new PopOuo();
