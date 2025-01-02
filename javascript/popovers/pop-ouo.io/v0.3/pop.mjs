@@ -46,7 +46,7 @@ export default class PopOuo {
    * Cargar estilos al HTML
    */
   stylesLoad() {
-    const tag_style = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tutosrivegamerLQ/legendary-guacamole@main/javascript/popovers/pop-ouo.io/pop.css">`;
+    const tag_style = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tutosrivegamerLQ/legendary-guacamole@main/javascript/popovers/pop-ouo.io/v0.3/pop.css">`;
     document.head.insertAdjacentHTML("beforeend", tag_style);
   }
 
