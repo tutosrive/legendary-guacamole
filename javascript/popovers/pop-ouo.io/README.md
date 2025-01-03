@@ -1,6 +1,7 @@
 # CDN html test
 
 | file | version | link |
+|------|---------|------|
 | test.html | 0.3 | https://cdn.jsdelivr.net/gh/tutosrivegamerLQ/legendary-guacamole@main/javascript/popovers/pop-ouo.io/v0.3/test.html |
 
 # CDN links
