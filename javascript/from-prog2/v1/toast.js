@@ -25,10 +25,10 @@ export default class Toast {
   static async show({ title = '', message = '', mode = 'info', duration = 3000, error = null }) {
     const body = document.querySelector('body')
     // Verificar si ya existe un "Toast", de ser así se remueve del "body" :)
-    body.contains(document.querySelector('#toast')) ? body.removeChild(document.querySelector('#toast')) : null
+    body.contains(document.querySelector('#toast-001')) ? body.removeChild(document.querySelector('#toast-001')) : null
 
     body.insertAdjacentHTML('beforeend', '<dialog id="toast"></dialog>')
-    const container = document.querySelector('#toast')
+    const container = document.querySelector('#toast-001')
     const toast = document.createElement('div')
 
     // remover el toast automáticamente
@@ -59,7 +59,7 @@ export default class Toast {
     const iconType = type[mode]
     const delay = (duration / 1000).toFixed(2)
 
-    toast.classList.add('mytoast', `toast--${mode}`)
+    toast.classList.add('mytoast-001', `toast--${mode}`)
     toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`
 
     toast.innerHTML = `
