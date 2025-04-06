@@ -27,7 +27,7 @@ export default class Toast {
     // Verificar si ya existe un "Toast", de ser así se remueve del "body" :)
     body.contains(document.querySelector('#toast-001')) ? body.removeChild(document.querySelector('#toast-001')) : null
 
-    body.insertAdjacentHTML('beforestart', '<dialog id="toast-001"></dialog>')
+    body.insertAdjacentHTML('beforebegin', '<dialog id="toast-001"></dialog>')
     const container = document.querySelector('#toast-001')
     const toast = document.createElement('div')
 
