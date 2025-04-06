@@ -11,7 +11,7 @@ export default class Dialog {
     this.id = 'dialog-' + Math.random().toString(36).slice(2, 12)
     this.body = document.querySelector('body')
     if (document.querySelector('.dialog-001')){
-      this.body.removeChild(document.querySelector(".dialog-001")
+      this.body.removeChild(document.querySelector(".dialog-001"))
     }
     this.body.insertAdjacentHTML(
       'beforeend',
