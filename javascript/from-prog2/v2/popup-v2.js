@@ -1,4 +1,4 @@
-import Dialog from './dialog.js'
+import Dialog from './dialog-v1-0.js'
 
 export default class Popup extends Dialog {
   #buttons
